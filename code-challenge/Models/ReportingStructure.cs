@@ -9,6 +9,6 @@ namespace challenge.Models
     {
         public Employee Employee { get; set; }
 
-        public int NumberOfReports { get; set; }
+        public int numberOfReports { get; set; }
     }
 }
