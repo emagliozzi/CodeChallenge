@@ -58,13 +58,13 @@ namespace challenge.Services
         public int GetReportCount(Employee employee)
         {
             int reportCount = 0;
-            if(employee.DirectReports.Count != 0)
+            if(employee.DirectReports != null)
             {
                 //Add a report for the first employee, then add report for every employee's directreport
-                foreach(Employee directReport in employee.DirectReports)
+                foreach(Employee reportee in employee.DirectReports)
                 {
                     reportCount++;
-                    reportCount += GetReportCount(employee);
+                    reportCount += GetReportCount(reportee);
                 }
             }
             return reportCount;

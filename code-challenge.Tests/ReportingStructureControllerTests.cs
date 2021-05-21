@@ -45,7 +45,7 @@ namespace code_challenge.Tests.Integration
         {
             // Arrange
             var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
-            int directReportCountExpected = 4;
+            int directReportCountExpected = 2;
 
             // Execute
             var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
