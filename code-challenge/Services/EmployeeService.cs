@@ -49,7 +49,7 @@ namespace challenge.Services
                 return new ReportingStructure
                 {
                     Employee = employee,
-                    numberOfReports = GetReportCount(employee)
+                    NumberOfReports = GetReportCount(employee)
                 };
             }
             return null;
