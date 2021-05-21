@@ -9,7 +9,7 @@ using challenge.Models;
 
 namespace challenge.Controllers
 {
-    [Route("api/reportingStructure")]
+    [Route("api/reportingstructure")]
     public class ReportingStructureController : Controller
     {
         private readonly ILogger _logger;
