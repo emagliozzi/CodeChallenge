@@ -54,7 +54,7 @@ namespace code_challenge.Tests.Integration
             // Assert
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             var reportingStructure = response.DeserializeContent<ReportingStructure>();
-            Assert.AreEqual(directReportCountExpected, reportingStructure.numberOfReports);
+            Assert.AreEqual(directReportCountExpected, reportingStructure.NumberOfReports);
         }
     }
 }

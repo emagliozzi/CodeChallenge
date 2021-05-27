@@ -1,0 +1,12 @@
+[
+  {
+    "employeeId": "1",
+    "salary": "1234.56",
+    "effectiveDate": "1/1/0001 12:00:00 AM"
+  },
+  {
+    "employeeId": "2",
+    "salary": "789012345.67",
+    "effectiveDate": "2/2/0002 12:00:00 AM"
+  }
+]
