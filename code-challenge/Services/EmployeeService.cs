@@ -40,6 +40,35 @@ namespace challenge.Services
             return null;
         }
 
+        public ReportingStructure GetReportingStructureById(string id)
+        {
+            Employee employee = GetById(id);
+            //if id is real employee return the ReportStructure
+            if(employee != null)
+            {
+                return new ReportingStructure
+                {
+                    Employee = employee,
+                    numberOfReports = GetReportCount(employee)
+                };
+            }
+            return null;
+        }
+
+        public int GetReportCount(Employee employee)
+        {
+            int reportCount = 0;
+            if(employee.DirectReports != null)
+            {
+                //Add a report for the first employee, then add report for every employee's directreport
+                foreach(Employee reportee in employee.DirectReports)
+                {
+                    reportCount++;
+                    reportCount += GetReportCount(reportee);
+                }
+            }
+            return reportCount;
+        }
         public Employee Replace(Employee originalEmployee, Employee newEmployee)
         {
             if(originalEmployee != null)

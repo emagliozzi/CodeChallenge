@@ -27,9 +27,10 @@ namespace challenge.Repositories
             return employee;
         }
 
+        //Add fix to include direct reports when getting employee
         public Employee GetById(string id)
         {
-            return _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
+            return _employeeContext.Employees.Include(m => m.DirectReports).SingleOrDefault(e => e.EmployeeId == id);
         }
 
         public Task SaveAsync()
