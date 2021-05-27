@@ -1,4 +1,10 @@
 # Mindex Coding Challenge
+
+### Submission for Eli Magliozzi
+I have gone through and made changes to implement task 1 and 2. Also, I have added some basic testing for this new functionality.
+When going through task 1, I found a bug preventing reports from being rendered correctly so I went ahead and fixed that.
+Overall, this task took me a little more than 7 hours as I had to take some time to refamiliarize myself with .net/c#, and it was my first time working with webservices in .NET as that is something I have only ever done in python.
+
 ## What's Provided
 A simple [.NetCore 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) web application has been created and bootstrapped 
 with data. The application contains information about all employees at a company. On application start-up, an in-memory 
